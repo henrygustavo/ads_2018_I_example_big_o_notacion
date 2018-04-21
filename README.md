@@ -1,4 +1,4 @@
-example big O notacion c#
+Examples big O notacion c#
 -------------------------
 
 In this respository, I'm doing a translation from java to C# of the big O notation examples that are in  
