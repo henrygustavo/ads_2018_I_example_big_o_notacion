@@ -1,4 +1,4 @@
-Examples big O notation C#
+Example big "O" notations C#
 -------------------------
 
 In this respository, I'm doing these tasks:
