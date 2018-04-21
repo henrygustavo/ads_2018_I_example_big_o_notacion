@@ -1,4 +1,4 @@
-Examples big O notacion C#
+Examples big O notation C#
 -------------------------
 
 In this respository, I'm doing these tasks:
@@ -7,8 +7,8 @@ In this respository, I'm doing these tasks:
 
 https://github.com/UNMSM-UPG-FISI/big-o-notation-java-18-1/tree/master/src/main/java/pe/edu/unmsm/fisi/upg/ads/big_o_notation_java
 
-2. Code the binary search algorithm
+2. Code the "binary search" algorithm
    Why is a big O logarithm notation?
   
-3. Code fibonacci serie algorithm
+3. Code the "fibonacci serie" algorithm
   Why is a big O exponential notation?
