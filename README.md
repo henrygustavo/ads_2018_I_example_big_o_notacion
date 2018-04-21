@@ -14,3 +14,5 @@ In this respository, I'm doing these tasks:
 3. Code the "fibonacci serie" algorithm.
 
    -Why is a big O exponential notation?
+   
+4. Improve the "fibonacci serie" algorithm from O(2^N) to O(N).
