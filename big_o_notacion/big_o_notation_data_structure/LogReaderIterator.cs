@@ -1,50 +1,51 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace big_o_notation_data_structure
 {
-    public class LogReaderIterator: IEnumerator<LogLine> {
-    private int counter = 0;
-    private int sizeLogLines;
-    private int sizeUniqueIps;
-
-        public LogLine Current => throw new NotImplementedException();
-
-        object IEnumerator.Current => throw new NotImplementedException();
+    public class LogReaderIterator : IEnumerator<LogLine>
+    {
+        private int counter = 0;
+        private int sizeLogLines;
+        private int sizeUniqueIps;
+        private LogLine _current;
 
         public LogReaderIterator(int sizeLogLines, int sizeUniqueIps)
-    {
-        this.sizeLogLines = sizeLogLines;
-        this.sizeUniqueIps = sizeUniqueIps;
-    }
-
-    public LogLine next()
-    {
-        if (this.MoveNext())
         {
-            this.counter++;
-            return new LogLine(this.counter % this.sizeUniqueIps);
+            this.sizeLogLines = sizeLogLines;
+            this.sizeUniqueIps = sizeUniqueIps;
         }
-        throw new Exception();
-    }
 
-        public void Dispose()
+        public LogLine Current => _current;
+
+        object IEnumerator.Current => Current;
+
+        public bool hasNext()
         {
-            throw new NotImplementedException();
+            return this.counter < this.sizeLogLines;
         }
 
         public bool MoveNext()
         {
-            return this.counter < this.sizeLogLines;
+            if (this.hasNext()) {
+                this.counter++;
+                _current = new LogLine(this.counter % this.sizeUniqueIps);
+                return true;
+            }
+
+            return false;
         }
 
         public void Reset()
         {
             throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            _current = null;
+
         }
     }
 }

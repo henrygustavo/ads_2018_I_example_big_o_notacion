@@ -45,7 +45,7 @@ namespace big_o_notation_data_structure
 
         public IEnumerator<LogLine> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return new LogReaderIterator(this.sizeLogLines, this.sizeUniqueIps);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
