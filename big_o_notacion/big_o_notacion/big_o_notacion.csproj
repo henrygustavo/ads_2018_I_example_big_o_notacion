@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearch.cs" />
     <Compile Include="Exponential.cs" />
     <Compile Include="Lineal.cs" />
     <Compile Include="LinealExampleType.cs" />

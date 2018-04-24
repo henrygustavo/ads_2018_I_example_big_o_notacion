@@ -7,7 +7,7 @@ namespace big_o_notation_data_structure
     {
         private static int SIZE_LOG_LINES = 100000;
         private static int SIZE_UNIQUE_IPS = 90001;
-        private static LogReader logReader = new LogReader(SIZE_LOG_LINES, SIZE_UNIQUE_IPS, CollectionType.ArrayList);
+        private static LogReader logReader = new LogReader(SIZE_LOG_LINES, SIZE_UNIQUE_IPS, CollectionType.HashSet);
 
         static void Main(string[] args)
         {
@@ -27,7 +27,10 @@ namespace big_o_notation_data_structure
             Console.WriteLine(String.Format("Number of unique IPs: {0}", sizeUniqueIps));
             Console.WriteLine(string.Format("Time elapsed: {0} seconds", stopwatch.Elapsed.TotalSeconds) + "\n");
 
-            Console.ReadLine();
+            //Console.ReadLine();
+
+            
+            System.Threading.Thread.Sleep(1);
         }
     }
 }
