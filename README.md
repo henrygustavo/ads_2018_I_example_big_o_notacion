@@ -24,7 +24,7 @@ In this respository, I'm doing these tasks:
 	
 	"x" is the number of times you can split an array of size "n" in half before it has the size 1.
 	
-	then:
+	Finally, the goal is to have a function that receives as input the "n" and returns "x". That's why we use logarithm:
 	
 	2^x = n
 	
@@ -36,6 +36,8 @@ In this respository, I'm doing these tasks:
 	
 	x = log2(n)
 	
+	log2(n) = x
+	
 	In conclusion, the maximum number of iterations "x" you need to search in an array of "n" elements is log2(n).
 	
 	
@@ -43,35 +45,32 @@ In this respository, I'm doing these tasks:
 
    -Why is a big O exponential notation?
    
-   this is a fibonacci serie 0,1,1,2,3,5,8,13,...
+   	this is a fibonacci serie 0,1,1,2,3,5,8,13,...
 
-   As you can see, you can get the nth term by adding together the previous two terms.
+	As you can see, you can get the nth term by adding together the previous two terms.
 
-the formula will be:
+	the formula will be:
 
-f(n) = f(n-1) + f(n-2)
+	f(n) = f(n-1) + f(n-2)
 
-example: 8 = 3+5
+	example: 8 = 3+5
 
-in the code:
+	In the code:
 
-int t(int n)
-{
-    if (n <= 1)
-        return n;
-    else
-        return t(n - 1) + t(n - 2);
-}
+	int t(int n)
+	{
+    	  if (n <= 1) return n;
+          else return t(n - 1) + t(n - 2);
+	}
 
 First of all , you have to know how many recursive calls or levels you are going to have from "n" term to the fist term. Then, per each level you are going to call twice the function "t" and there is no possibility to re-use previously calculated values.
 
-									t(n-1)  		+  		t(n-2)          		2^1=2
-									|         				  |  
-                            t(n-2)	+	t(n-3)  		t(n-3)		+	t(n-4)   	2^2=4  
-                       t(n-3)+t(n-4)  t(n-4)+t(n-5)   t(n-4)+t(n-5)  t(n-5)+t(n-6)  2^3=8
-                                .               .           .
-                                .               .           .
-							t(1)+t(0)		t(1)+t(0)								2^n
+				t(n-1)  		+  		t(n-2)          	2^1=2
+                     t(n-2)	 +  	     t(n-3)  		t(n-3)	  +	t(n-4)   	2^2=4  
+                 t(n-3)+t(n-4) 	 	t(n-4)+t(n-5)  	 t(n-4)+t(n-5)      t(n-5)+t(n-6)       2^3=8
+                                .               .           .			.
+                                .               .           .			.
+		t(1) + t(0)		t(1) + t(0) 	t(1)+t(0)	   t(1)+t(0)		2^n
 															
 the "t" function will be called =>2+4+8+.....2^n times.Thus, the complexity  is O(2^n)
    
