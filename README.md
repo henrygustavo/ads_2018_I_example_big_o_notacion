@@ -66,8 +66,11 @@ In this respository, I'm doing these tasks:
 First of all , you have to know how many recursive calls or levels you are going to have from "n" term to the fist term. Then, per each level you are going to call twice the function "t" and there is no possibility to re-use previously calculated values.
 
 	      t(n-1)			+ 		t(n-2)	     	      2^1=2
+	      
      t(n-2)	+      t(n-3)		      t(n-3)	+	  t(n-4)      2^2=4
+     
 t(n-3)+t(n-4)	    t(n-4)+t(n-5)	t(n-4)+t(n-5)	     t(n-5)+t(n-6)    2^3=8
+
 t(1) +t(0)	     t(1)+t(0)		 t(1)+t(0)		t(1)+t(0)     2^n
 
 The "t" function will be called =>2+4+8+.....2^n times.Thus, the complexity  is O(2^n)
