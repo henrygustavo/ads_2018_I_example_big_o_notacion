@@ -31,7 +31,7 @@ namespace big_o_notacion
                                         81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
                                         91, 92, 93, 94, 95, 96, 97, 98, 99, 100};
 
-           int position =  lineal.Function(array, 99);
+           int position =  lineal.Function(array, 50);
 
             Console.WriteLine(string.Format("position: {0}" , position));
 
