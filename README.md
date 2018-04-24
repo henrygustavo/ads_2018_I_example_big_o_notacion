@@ -69,9 +69,9 @@ First of all , you have to know how many recursive calls or levels you are going
 	      t(n-1)			+ 		t(n-2)	     	      2^1=2
      t(n-2)	+      t(n-3)		      t(n-3)	+	  t(n-4)      2^2=4
 t(n-3)+t(n-4)	    t(n-4)+t(n-5)	t(n-4)+t(n-5)	     t(n-5)+t(n-6)    2^3=8
-
 t(1) +t(0)	     t(1)+t(0)		 t(1)+t(0)		t(1)+t(0)     2^n
 															
+
 the "t" function will be called =>2+4+8+.....2^n times.Thus, the complexity  is O(2^n)
    
 4. Improve the "fibonacci serie" algorithm from O(2^N) to O(N).
