@@ -67,7 +67,7 @@ First of all , you have to know how many recursive calls or levels you are going
 
 	     		 t(n-1)			+ 		t(n-2)	     	      2^1=2
 	      
-    	 	t(n-2)	+      t(n-3)		      t(n-3)	+	  t(n-4)      2^2=4
+    	 t(n-2)	+      t(n-3)		      t(n-3)	+	  t(n-4)      2^2=4
      
 	t(n-3)+t(n-4)	    t(n-4)+t(n-5)	t(n-4)+t(n-5)	     t(n-5)+t(n-6)    2^3=8
 
